@@ -1,4 +1,4 @@
-import random
+from random import randint
 
 class ChuteONumero:
     def __init__(self):
@@ -31,7 +31,7 @@ class ChuteONumero:
         self.valorChute = input('Chute um número: ')
     
     def GerarNumero(self):
-        self.valorAleatorio = random.randint(self.valorMinimo, self.valorMaximo)
+        self.valorAleatorio = randint(self.valorMinimo, self.valorMaximo)
 
 chute = ChuteONumero()
 chute.Iniciar()
