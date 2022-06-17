@@ -1,2 +1,2 @@
 # estudosPython001
-8 projetos em python para estudos
+alguns projetos em python usando PySimpleGUI
