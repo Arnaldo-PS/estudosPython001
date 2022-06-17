@@ -1,6 +1,8 @@
 import PySimpleGUI as sg
 from random import randint
 
+from pygame import WINDOWCLOSE
+
 class ChuteONumero:
     def __init__(self):
         self.valorAleatorio = 0
@@ -15,7 +17,7 @@ class ChuteONumero:
         layout = [
             [sg.Text('Seu chute',size=(39,0))],
             [sg.Input(size=(18,0),key='valorChute')],
-            [sg.Button('Chutar')],
+            [sg.Button('Chutar'),sg.Button('Fechar')],
             [sg.Output(size=(20,10))]
         ]
 
@@ -27,8 +29,9 @@ class ChuteONumero:
             while True:
                 # add valores
                 self.evento, self.valores = self.janela.Read()
-                
-                if self.evento == 'Chutar':
+                if self.evento == sg.WIN_CLOSED or self.evento == 'Fechar':
+                    break
+                elif self.evento == 'Chutar':
                     self.valorChute = self.valores['valorChute']
                     while self.tentarNovamente == True:
                         if int(self.valorChute) > self.valorAleatorio:
