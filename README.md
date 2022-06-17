@@ -1,2 +1,3 @@
 # estudosPython001
-alguns projetos em python usando PySimpleGUI
+aprendendo a utilizar o módulo PySimpleGUI
+aprofundando em classes 
